@@ -6,14 +6,32 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='typescript/ParOuImpar.js'></script>
+  <!--  <script>
+
+        let player = new NumPlayer();
+        function btClick() {
+
+        }
+    </script> -->
 </head>
 <body>
     <h1>Jogo Par ou Impar</h1>
-
-    <div id="content">
-        <button type="button" id="button" onclick="btClick()">PAR</button>
-        
+    <div class="form-group">
+        <!--<button type="button" id="button" onclick="btClick()">PAR</button>
+            <button type="button" id="button" onclick="btClick()">IMPAR</button>    -->
+            
+        <form method="post">
+            Digite um numero
+            <input type="number" placeholder="num" id="num" name="num" [(ngModel)]="num" />
+        </form>    
     </div>
+    
+    <div class="form-group">
+    
+        <input type="submit" class="btnJogar" value="btClick">
+
+    </div>
+    <div id="content"></div>
 </body>
 </html>
