@@ -28,6 +28,10 @@ export class ParOuImparComponent implements OnInit {
     }
   }
 
+  verificaVencedor(resultado: string) {
+    
+  }
+
   constructor() { }
 
   ngOnInit(): void {
