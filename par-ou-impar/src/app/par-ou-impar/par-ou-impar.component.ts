@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParOuImparComponent implements OnInit {
   numPlayer: number = 0;
-  private numPc: number = Math.floor(Math.random() * 10);
+  numPc: number = 0;
   resultado = '';
+  result = 0;
 
   numero(evento: KeyboardEvent) {
     this.numPlayer = Number.parseInt((<HTMLInputElement>evento.target).value);
   }
 
   parOuImpar(): any {
-    let result = this.numPlayer + this.numPc;
+    this.numPc = Math.floor(Math.random() * 10);
+    this.result = this.numPlayer + this.numPc;
 
-    if (result % 2 == 0) {
+    if (this.result % 2 == 0) {
       this.resultado = "PAR";
       return this.resultado;
     } else {
