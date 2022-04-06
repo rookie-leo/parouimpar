@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParOuImparComponent implements OnInit {
   numPlayer: number = 0;
   numPc: number = 0;
-  resultado = '';
-  result = 0;
+  resultado: string = '';
+  result: number = 0;
+  option: string = '';
 
   numero(evento: KeyboardEvent) {
     this.numPlayer = Number.parseInt((<HTMLInputElement>evento.target).value);
@@ -28,8 +29,12 @@ export class ParOuImparComponent implements OnInit {
     }
   }
 
-  verificaVencedor(resultado: string) {
-    
+  verificaVencedor(option: any, resultado: any): string {
+    if (this.resultado == option) {
+      return "Voce Venceu!";
+    } else {
+      return "Voce Perdeu!"
+    }
   }
 
   constructor() { }

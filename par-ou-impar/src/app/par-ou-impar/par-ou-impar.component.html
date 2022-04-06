@@ -2,13 +2,13 @@
     <div class="games">
         <h2 class="bkg-red"><b>PAR ou IMPAR</b></h2>
         Escolha PAR ou IMPAR:
-        <select #classe (change)="0">
+        <select [(ngModel)]="option" (change)="0">
             <option>PAR</option>
             <option>IMPAR</option>
         </select>
-
+        
     </div>
-</section>
+    </section>
 <section class="games">
     <div>
         Digite um numero: 
@@ -17,10 +17,11 @@
         <button (click)="parOuImpar()">
             Jogar
         </button>
-      <br> <br> Valor digitado: {{ numPlayer }} <br>
+        <br> <br>
+        Valor digitado: {{ numPlayer }} <br>
         Valor Pc: {{ numPc }} <br>
         Valor result: {{ result }} <br>
         Resultado: {{ resultado }} <br>
-
+        Quem é o vencedor? {{ verificaVencedor(option, resultado) }}
     </div>
 </section>
